@@ -1,0 +1,29 @@
+{
+  "counter_url": "https://api-metrika.yandex.net/management/v1/counter/%s",
+  "stat_url": "https://api-metrika.yandex.net/stat/v1/data",
+  "yandex_token": "", #add token
+  "log_file": "yandex-metric-to-excel.log",
+  "log_format": "%(levelname)-10s|%(asctime)s| %(name)s --- %(message)s",
+  "headers": {
+    "GET": "/management/v1/counters HTTP/1.1",
+    "Host": "api-metrika.yandex.net",
+    "Authorization": "OAuth ",
+    "Content-Type": "application/x-yametrika+json"
+  },
+  "columns": ["Дата", "1-й автодоскролл"],
+  "goals": ["1-й автодоскролл"],
+  "parameters": {
+    "ids": "",
+    "metrics": "",
+    "dimensions":"ym:s:date",
+    "date1": "",
+    "date2": "",
+    "sort": "ym:s:date",
+    "accuracy": "full",
+    "limit": 100
+  },
+  "totals_only": 1,
+  "counters_ids": [
+
+  ] #add
+}
